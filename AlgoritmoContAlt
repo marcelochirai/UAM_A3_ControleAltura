@@ -1,0 +1,48 @@
+/*O algoritmo deve medir a altura das pessoas e 
+efetuar uma avaliação, constatando se a altura é maior ou igual a 1,80 m, para possam entrar. 
+Se menor do que 1,80 m, o programa apresenta a mensagem “Entrada Não Permitida”.*/
+
+#include <stdio.h>
+int main(){
+ // return isso vai fechar o programa
+ float altPessoa1, altPessoa2, altPessoa3, altMin;
+ int pesquisa;
+ altMin = 1.80;
+ altPessoa1 = 1.73;
+ altPessoa2 = 1.81;
+ altPessoa3 = 1.83;
+ 
+ printf("CONTROLE DE ALTURA DAS PESSOAS:\n\n");
+ printf("Altura da Pessoa 1: %.2f\n",altPessoa1);
+ printf("Altura da Pessoa 2: %.2f\n",altPessoa2);
+ printf("Altura da Pessoa 3: %.2f\n",altPessoa3);
+ 
+ do
+ {
+ printf(" \nDigite 1 para iniciar a análise ou 2 para sair: ");
+ scanf("%d", &pesquisa);
+ if(pesquisa==2)break; //Encerra a análise ao digitar 2.
+ 
+ else
+ {
+ //Comparação da altura de cada Pessoa
+ 
+ if(altMin <= altPessoa1)
+ printf("Pessoa 1 - Entrada permitida, pois sua altura é: %.2f \n",altPessoa1);
+ else
+ printf("Pessoa 1 - Entrada NÃO permitida, pois sua altura é: %.2f \n",altPessoa1);
+ if(altMin <= altPessoa2)
+ printf("Pessoa 2 - Entrada permitida, pois sua altura é: %.2f \n",altPessoa2);
+ else
+ printf("Pessoa 2 - Entrada NÃO permitida, pois sual altura é: %.2f \n",altPessoa2);
+ if(altMin <= altPessoa3)
+ printf("Pessoa 3 - Entrada permitida, pois sua altura é: %.2f \n",altPessoa3);
+ else
+ printf("Pessoa 3 - Entrada NÃO permitida, pois sual altura é: %.2f \n",altPessoa3);
+ } 
+ }
+ 
+ while(pesquisa != 2 );
+ printf("\n\n\n");
+ return 0;
+}
